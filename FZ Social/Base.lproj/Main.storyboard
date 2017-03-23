@@ -22,15 +22,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1en-sf-lQW">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1en-sf-lQW" customClass="FancyView" customModule="FZ_Social" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
                                 <color key="backgroundColor" red="0.0" green="0.73725490196078436" blue="0.83137254901960778" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="8ei-k2-LPY"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hb4-6D-OLT">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hb4-6D-OLT" customClass="FancyView" customModule="FZ_Social" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="507" width="320" height="61"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="If you do not have account yet, an account will be automaticly created for you" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Hl-Tw-gHj">
+                                        <rect key="frame" x="8" y="0.0" width="304" height="61"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.51372549019607838" blue="0.5607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="61" id="j9b-FW-xYf"/>
@@ -42,7 +51,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sqt-VY-Khh">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sqt-VY-Khh" customClass="RoundButton" customModule="FZ_Social" customModuleProvider="target">
                                 <rect key="frame" x="85" y="148.5" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="uLo-o8-dEx"/>
@@ -51,22 +60,22 @@
                                 <state key="normal" title="Button" image="logo-facebook"/>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="iGt-Hu-MmD">
-                                <rect key="frame" x="56" y="319" width="208" height="120"/>
+                                <rect key="frame" x="36" y="319" width="248" height="120"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ixF-rl-oUF">
-                                        <rect key="frame" x="0.0" y="0.0" width="208" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ixF-rl-oUF" customClass="FancyField" customModule="FZ_Social" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="248" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Passworld" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wec-3t-Xds">
-                                        <rect key="frame" x="0.0" y="45" width="208" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Passworld" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wec-3t-Xds" customClass="FancyField" customModule="FZ_Social" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="45" width="248" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bQr-JH-jEy">
-                                        <rect key="frame" x="0.0" y="90" width="208" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bQr-JH-jEy" customClass="FancyButton" customModule="FZ_Social" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="90" width="248" height="30"/>
                                         <color key="backgroundColor" red="0.0039215686274509803" green="0.3411764705882353" blue="0.60599851919934633" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
                                         <state key="normal" title="Sign In">
@@ -91,15 +100,15 @@
                             <constraint firstAttribute="trailing" secondItem="1en-sf-lQW" secondAttribute="trailing" id="ZSd-RK-nVd"/>
                             <constraint firstItem="1en-sf-lQW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="buq-Hr-KK8"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hb4-6D-OLT" secondAttribute="bottom" id="imZ-qk-xne"/>
-                            <constraint firstItem="iGt-Hu-MmD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="ksb-oF-k5L"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="iGt-Hu-MmD" secondAttribute="trailing" constant="40" id="nom-IB-sE2"/>
+                            <constraint firstItem="iGt-Hu-MmD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="ksb-oF-k5L"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iGt-Hu-MmD" secondAttribute="trailing" constant="20" id="nom-IB-sE2"/>
                             <constraint firstItem="sqt-VY-Khh" firstAttribute="top" secondItem="G5W-pY-cGS" secondAttribute="bottom" constant="8" id="zF0-m4-9Py"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
+            <point key="canvasLocation" x="116.25" y="123.59154929577466"/>
         </scene>
     </scenes>
     <resources>
