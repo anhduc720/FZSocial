@@ -58,9 +58,12 @@
                                     <constraint firstAttribute="height" constant="150" id="yQd-8w-ike"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="logo-facebook"/>
+                                <connections>
+                                    <action selector="facebookBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2oO-26-vOR"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="iGt-Hu-MmD">
-                                <rect key="frame" x="36" y="319" width="248" height="120"/>
+                                <rect key="frame" x="36" y="318.5" width="248" height="120"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ixF-rl-oUF" customClass="FancyField" customModule="FZ_Social" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="248" height="30"/>
