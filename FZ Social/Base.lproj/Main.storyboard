@@ -69,13 +69,12 @@
                                         <rect key="frame" x="0.0" y="0.0" width="248" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Passworld" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wec-3t-Xds" customClass="FancyField" customModule="FZ_Social" customModuleProvider="target">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Passworld" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wec-3t-Xds" customClass="FancyField" customModule="FZ_Social" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="45" width="248" height="30"/>
                                         <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bQr-JH-jEy" customClass="FancyButton" customModule="FZ_Social" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="90" width="248" height="30"/>
@@ -84,6 +83,9 @@
                                         <state key="normal" title="Sign In">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="signInTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qVg-nq-89F"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -108,6 +110,10 @@
                             <constraint firstItem="sqt-VY-Khh" firstAttribute="top" secondItem="G5W-pY-cGS" secondAttribute="bottom" constant="8" id="zF0-m4-9Py"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="ixF-rl-oUF" id="E5w-CD-CKu"/>
+                        <outlet property="passwordField" destination="wec-3t-Xds" id="SWY-XI-wXW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
