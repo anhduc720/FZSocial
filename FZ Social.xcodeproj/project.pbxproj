@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0CC90E691E83E92500A5EA6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC90E681E83E92500A5EA6D /* AppDelegate.swift */; };
-		0CC90E6B1E83E92500A5EA6D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC90E6A1E83E92500A5EA6D /* ViewController.swift */; };
+		0CC90E6B1E83E92500A5EA6D /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC90E6A1E83E92500A5EA6D /* SignInVC.swift */; };
 		0CC90E6E1E83E92500A5EA6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CC90E6C1E83E92500A5EA6D /* Main.storyboard */; };
 		0CC90E701E83E92500A5EA6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CC90E6F1E83E92500A5EA6D /* Assets.xcassets */; };
 		0CC90E731E83E92500A5EA6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CC90E711E83E92500A5EA6D /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 /* Begin PBXFileReference section */
 		0CC90E651E83E92500A5EA6D /* FZ Social.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FZ Social.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CC90E681E83E92500A5EA6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0CC90E6A1E83E92500A5EA6D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0CC90E6A1E83E92500A5EA6D /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		0CC90E6D1E83E92500A5EA6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0CC90E6F1E83E92500A5EA6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0CC90E721E83E92500A5EA6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -71,8 +71,10 @@
 		0CC90E671E83E92500A5EA6D /* FZ Social */ = {
 			isa = PBXGroup;
 			children = (
+				0CC90E7E1E83EB1800A5EA6D /* Model */,
+				0CC90E7D1E83EB1000A5EA6D /* View */,
+				0CC90E7C1E83EB0600A5EA6D /* Controller */,
 				0CC90E681E83E92500A5EA6D /* AppDelegate.swift */,
-				0CC90E6A1E83E92500A5EA6D /* ViewController.swift */,
 				0CC90E6C1E83E92500A5EA6D /* Main.storyboard */,
 				0CC90E6F1E83E92500A5EA6D /* Assets.xcassets */,
 				0CC90E711E83E92500A5EA6D /* LaunchScreen.storyboard */,
@@ -80,6 +82,28 @@
 				0CC90E7A1E83E93B00A5EA6D /* GoogleService-Info.plist */,
 			);
 			path = "FZ Social";
+			sourceTree = "<group>";
+		};
+		0CC90E7C1E83EB0600A5EA6D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0CC90E6A1E83E92500A5EA6D /* SignInVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		0CC90E7D1E83EB1000A5EA6D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		0CC90E7E1E83EB1800A5EA6D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		5A4A29FE5357E095F6143E26 /* Pods */ = {
@@ -216,7 +240,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CC90E6B1E83E92500A5EA6D /* ViewController.swift in Sources */,
+				0CC90E6B1E83E92500A5EA6D /* SignInVC.swift in Sources */,
 				0CC90E691E83E92500A5EA6D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -381,6 +405,7 @@
 				0CC90E791E83E92500A5EA6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
