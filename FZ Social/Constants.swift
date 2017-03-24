@@ -9,3 +9,4 @@
 import UIKit
 
 let GRAY_SHADOW: CGFloat = 120.0 / 255
+let KEY_CHAIN = "uid"

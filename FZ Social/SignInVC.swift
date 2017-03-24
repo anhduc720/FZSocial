@@ -10,6 +10,7 @@ import UIKit
 import FBSDKLoginKit
 import FBSDKCoreKit
 import Firebase
+import SwiftKeychainWrapper
 
 class SignInVC: UIViewController {
 
@@ -20,6 +21,14 @@ class SignInVC: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        
+        if KeychainWrapper.standard.string(forKey: KEY_CHAIN) != nil {
+            performSegue(withIdentifier: "FeedVC", sender: nil)
+        }
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -50,27 +59,42 @@ class SignInVC: UIViewController {
     
     func firebaseAuth(_ credential: FIRAuthCredential) {
         
-        FIRAuth.auth()?.signIn(with: credential, completion: { (result, error) in
+        FIRAuth.auth()?.signIn(with: credential, completion: { (user, error) in
             if error != nil {
                 print("Unable to authenticate with FireBase")
             } else {
                 print("Successfully authenticated with FireBase")
+                if let user = user {
+                    self.saveUserCredential(userID: user.uid)
+                }
             }
         })
+        
+    }
+    
+    func saveUserCredential(userID: String){
+        
+        let result = KeychainWrapper.standard.set(userID, forKey: KEY_CHAIN)
+        performSegue(withIdentifier: "FeedVC", sender: nil)
+        print("Save User \(result)")
         
     }
 
     @IBAction func signInTapped(_ sender: Any) {
         
         if let email = emailField.text, let pwd = passwordField.text {
-            FIRAuth.auth()?.signIn(withEmail: email, password: pwd, completion: { (result, error) in
+            FIRAuth.auth()?.signIn(withEmail: email, password: pwd, completion: { (user, error) in
                 
                 if error == nil {
                     
                     print("User authenticated with firebase")
                     
+                    if let user = user {
+                        self.saveUserCredential(userID: user.uid)
+                    }
+                    
                 } else {
-                    FIRAuth.auth()?.createUser(withEmail: email, password: pwd, completion: { (result, error) in
+                    FIRAuth.auth()?.createUser(withEmail: email, password: pwd, completion: { (user, error) in
                         
                         if error != nil {
                             
@@ -79,6 +103,9 @@ class SignInVC: UIViewController {
                         } else {
                             
                             print("Successfully authenticated with firebase using email")
+                            if let user = user {
+                                self.saveUserCredential(userID: user.uid)
+                            }
                         }
                         
                         

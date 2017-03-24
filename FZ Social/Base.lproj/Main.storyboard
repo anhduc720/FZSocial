@@ -74,6 +74,7 @@
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Passworld" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wec-3t-Xds" customClass="FancyField" customModule="FZ_Social" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="45" width="248" height="30"/>
                                         <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bQr-JH-jEy" customClass="FancyButton" customModule="FZ_Social" customModuleProvider="target">
@@ -113,11 +114,32 @@
                     <connections>
                         <outlet property="emailField" destination="ixF-rl-oUF" id="E5w-CD-CKu"/>
                         <outlet property="passwordField" destination="wec-3t-Xds" id="SWY-XI-wXW"/>
+                        <segue destination="n7e-Eb-sn2" kind="show" identifier="FeedVC" id="OIp-bP-146"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="116.25" y="123.59154929577466"/>
+        </scene>
+        <!--FeedVC-->
+        <scene sceneID="nYY-BO-qSL">
+            <objects>
+                <viewController id="n7e-Eb-sn2" customClass="FeedVC" customModule="FZ_Social" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BoI-cf-9Qc"/>
+                        <viewControllerLayoutGuide type="bottom" id="8NA-mD-ff7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1fe-4e-sMm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="logOut" id="DJp-X1-1Xu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G9a-sG-m4p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="976.875" y="123.59154929577466"/>
         </scene>
     </scenes>
     <resources>
