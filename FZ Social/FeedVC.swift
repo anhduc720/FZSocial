@@ -37,4 +37,12 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         return tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as! PostCell
     }
 
+    @IBAction func signOutTapped(_ sender: Any) {
+        
+        let result = KeychainWrapper.standard.removeObject(forKey: KEY_CHAIN)
+        try! FIRAuth.auth()?.signOut()
+        performSegue(withIdentifier: "logOut", sender: nil)
+        
+        
+    }
 }

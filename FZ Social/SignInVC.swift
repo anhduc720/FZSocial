@@ -65,14 +65,17 @@ class SignInVC: UIViewController {
             } else {
                 print("Successfully authenticated with FireBase")
                 if let user = user {
-                    self.saveUserCredential(userID: user.uid)
+                    let userData = ["provider":credential.provider]
+                    self.saveUserCredential(userID: user.uid, userData: userData)
                 }
             }
         })
         
     }
     
-    func saveUserCredential(userID: String){
+    func saveUserCredential(userID: String, userData: Dictionary<String, String>){
+        
+        DataService.ds.createFirebaseUserDB(uid: userID, userData: userData)
         
         let result = KeychainWrapper.standard.set(userID, forKey: KEY_CHAIN)
         performSegue(withIdentifier: "FeedVC", sender: nil)
@@ -90,7 +93,8 @@ class SignInVC: UIViewController {
                     print("User authenticated with firebase")
                     
                     if let user = user {
-                        self.saveUserCredential(userID: user.uid)
+                        let userData = ["provider":user.providerID]
+                        self.saveUserCredential(userID: user.uid, userData: userData)
                     }
                     
                 } else {
@@ -104,7 +108,8 @@ class SignInVC: UIViewController {
                             
                             print("Successfully authenticated with firebase using email")
                             if let user = user {
-                                self.saveUserCredential(userID: user.uid)
+                                let userData = ["provider":user.providerID]
+                                self.saveUserCredential(userID: user.uid, userData: userData)
                             }
                         }
                         

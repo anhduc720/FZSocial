@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0C65E8E81E84DA42001E7425 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C65E8E71E84DA42001E7425 /* CircleView.swift */; };
 		0C65E8EA1E84E26F001E7425 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C65E8E91E84E26F001E7425 /* PostCell.swift */; };
+		0C65E8ED1E84F110001E7425 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C65E8EC1E84F110001E7425 /* DataService.swift */; };
 		0CC90E691E83E92500A5EA6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC90E681E83E92500A5EA6D /* AppDelegate.swift */; };
 		0CC90E6B1E83E92500A5EA6D /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC90E6A1E83E92500A5EA6D /* SignInVC.swift */; };
 		0CC90E6E1E83E92500A5EA6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CC90E6C1E83E92500A5EA6D /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		0C65E8E71E84DA42001E7425 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		0C65E8E91E84E26F001E7425 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		0C65E8EC1E84F110001E7425 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		0CC90E651E83E92500A5EA6D /* FZ Social.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FZ Social.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CC90E681E83E92500A5EA6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CC90E6A1E83E92500A5EA6D /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -67,6 +69,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		0C65E8EB1E84F0F2001E7425 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0C65E8EC1E84F110001E7425 /* DataService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		0CC90E5C1E83E92500A5EA6D = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +98,7 @@
 		0CC90E671E83E92500A5EA6D /* FZ Social */ = {
 			isa = PBXGroup;
 			children = (
+				0C65E8EB1E84F0F2001E7425 /* Services */,
 				0CC90E8A1E84207D00A5EA6D /* FZ Social.entitlements */,
 				0CC90E871E83F73F00A5EA6D /* Util */,
 				0CC90E7E1E83EB1800A5EA6D /* Model */,
@@ -284,6 +295,7 @@
 				0CC90E841E83F71D00A5EA6D /* RoundButton.swift in Sources */,
 				0CC90E6B1E83E92500A5EA6D /* SignInVC.swift in Sources */,
 				0CC90E861E83F73800A5EA6D /* FancyButton.swift in Sources */,
+				0C65E8ED1E84F110001E7425 /* DataService.swift in Sources */,
 				0CC90E8C1E84291400A5EA6D /* FeedVC.swift in Sources */,
 				0CC90E891E83F74B00A5EA6D /* Constants.swift in Sources */,
 				0CC90E691E83E92500A5EA6D /* AppDelegate.swift in Sources */,

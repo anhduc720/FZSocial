@@ -143,6 +143,9 @@
                                             <constraint firstAttribute="width" constant="30" id="I31-Jx-7vl"/>
                                         </constraints>
                                         <state key="normal" image="sign-out"/>
+                                        <connections>
+                                            <action selector="signOutTapped:" destination="n7e-Eb-sn2" eventType="touchUpInside" id="Jca-XR-Q57"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Feed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6t-4K-9UW">
                                         <rect key="frame" x="136.5" y="24.5" width="103" height="27.5"/>
